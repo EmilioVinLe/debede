@@ -16,4 +16,5 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
     @Query("SELECT p FROM Producto p WHERE p.pyme_id = ?1 ORDER BY p.vendidos DESC")
     List<Producto> findTopVendidosByPymeId(int pymeId);
+
 }
