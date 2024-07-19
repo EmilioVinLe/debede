@@ -39,7 +39,7 @@ public class ProductoController {
     }
 
     @PostMapping
-   // @PreAuthorize("hasRole('PYME')")
+    @PreAuthorize("hasRole('PYME')")
     public Producto crearProducto(@RequestBody Producto producto) {
         return productoService.crearOActualizarProducto(producto);
     }
